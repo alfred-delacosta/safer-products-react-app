@@ -13,7 +13,7 @@ const RecallList = (props) => {
                         <h3>Recall Date: {new Date(data.RecallDate).toLocaleDateString()}</h3>
                         {data.hasOwnProperty("Injuries") && data.Injuries.length > 0 && data.Injuries[0].hasOwnProperty("Name") && <h4>Injuries: {data.Injuries[0].Name}</h4>}
                         <p>{data.Description}</p>
-                        <a href={data.URL}>{data.URL}</a>
+                        <a href={data.URL} target="_blank" rel="noreferrer">{data.URL}</a>
                         <hr />
                     </div>
                 );
